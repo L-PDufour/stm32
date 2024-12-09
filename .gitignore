@@ -1,12 +1,8 @@
-/*
 
 # GIT
-!.gitignore
-
+.direnv/**
 # Guides
-!README.md
-!/docs
-
+*.elf
 # NIX
 !*.nix
 !.envrc
