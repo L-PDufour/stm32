@@ -3,6 +3,7 @@
 .direnv/**
 # Guides
 *.elf
+*.o
 # NIX
 !*.nix
 !.envrc
