@@ -1,5 +1,7 @@
 #include "stm32f4xx.h"
+#include "usart.h"
 #include <stdint.h>
+#include <stdio.h>
 
 #define LED_PIN 5
 
@@ -25,9 +27,12 @@ void main(void)
     SysTick_Config(100000);
     __enable_irq();
 
+    usart_init(USART2);
+
     while (1)
     {
         GPIOA->ODR ^= (1 << LED_PIN);
+        printf("[%.3f] Hello, World!\r\n", (float)ticks / 1000.0);
         delay_ms(500);
     }
 }

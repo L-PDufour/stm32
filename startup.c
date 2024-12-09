@@ -219,6 +219,7 @@ void reset_handler(void)
         bss[i] = 0;
     }
 
+    __libc_init_array();
     main();
 }
 
